@@ -37,7 +37,7 @@ public class Main {
 
         ArrayList<Integer> listaLiczbLosowych = new ArrayList<>();
         for (int i = 0; i < 6; i++) {
-            int liczba =(int)(Math.random()*100);
+            int liczba =(int)(Math.random()*100+1);
             listaLiczbLosowych.add(liczba);
         }
         System.out.println("Wylosowana lista");
@@ -45,5 +45,16 @@ public class Main {
             System.out.print(element+", ");
         }
         System.out.println(listaLiczbLosowych);
+        //losowanie do listy bez powtorzen
+        ArrayList <Integer> listaLosowychBezPowtorzen = new ArrayList<>();
+        int liczba;
+        for (int i = 0; i < 6; i++) {
+            liczba = (int)(Math.random()*100+1);
+            while (listaLosowychBezPowtorzen.contains(liczba)){
+                liczba = (int)(Math.random()*100+1);
+            }
+            listaLosowychBezPowtorzen.add(liczba);
+        }
+        System.out.println(listaLosowychBezPowtorzen);
     }
 }
