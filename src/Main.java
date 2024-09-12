@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
 
@@ -19,7 +22,28 @@ public class Main {
         for (int element:tablicaLiczbLosowych) {
             System.out.print(element+", ");
         }
+        System.out.println(tablicaLiczbLosowych);
+        //wypelnianie kolekcji wartościami losowym
+        /*
+        Kolekcja może przechowywać tylko typy zlozone
+        np. Integer
+        Kolekcja nie musi miec zdefiniowanego rozmiaru
+        rozmiar może się zmieniac w trakcie
+        List -> ArrayList, LinkedList,
+        Set ->HashSet
+        Map
 
+         */
 
+        ArrayList<Integer> listaLiczbLosowych = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            int liczba =(int)(Math.random()*100);
+            listaLiczbLosowych.add(liczba);
+        }
+        System.out.println("Wylosowana lista");
+        for (Integer element:listaLiczbLosowych) {
+            System.out.print(element+", ");
+        }
+        System.out.println(listaLiczbLosowych);
     }
 }
